@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit",
-    "test": "node scripts/test-runner.js"
+    "test": "npx tsx --test src/engine/rules.test.ts && python3 -m unittest backend/tests/test_engine.py"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
@@ -24,7 +24,7 @@
     "motion": "^12.23.24"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
+    "@types/node": "^24.13.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.4.21",
