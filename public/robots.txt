@@ -1,0 +1,8 @@
+# User-agent configuration for XO Games Tactical Arena
+User-agent: *
+Allow: /
+Allow: /index.html
+Disallow: /api/
+Disallow: /ws/
+
+Sitemap: https://xogames.app/sitemap.xml

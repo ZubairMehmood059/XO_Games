@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080B12" />
+      <stop offset="50%" stop-color="#0E1420" />
+      <stop offset="100%" stop-color="#080B12" />
+    </linearGradient>
+    <linearGradient id="gridGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#35E7FF" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#FF3DAE" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#35E7FF" stop-opacity="0.2" />
+    </linearGradient>
+    <filter id="neonX" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#35E7FF" flood-opacity="0.7"/>
+    </filter>
+    <filter id="neonO" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#FF3DAE" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle Tactical Grid Lines -->
+  <g stroke="#29384D" stroke-width="1" stroke-opacity="0.4">
+    <line x1="80" y1="0" x2="80" y2="630" />
+    <line x1="1120" y1="0" x2="1120" y2="630" />
+    <line x1="0" y1="80" x2="1200" y2="80" />
+    <line x1="0" y1="550" x2="1200" y2="550" />
+  </g>
+
+  <!-- Border Frame -->
+  <rect x="40" y="40" width="1120" height="550" rx="16" fill="none" stroke="#29384D" stroke-width="2"/>
+  <rect x="36" y="36" width="30" height="30" fill="none" stroke="#35E7FF" stroke-width="3"/>
+  <rect x="1134" y="36" width="30" height="30" fill="none" stroke="#FF3DAE" stroke-width="3"/>
+  <rect x="36" y="564" width="30" height="30" fill="none" stroke="#35E7FF" stroke-width="3"/>
+  <rect x="1134" y="564" width="30" height="30" fill="none" stroke="#FF3DAE" stroke-width="3"/>
+
+  <!-- Brand Header Tag -->
+  <rect x="80" y="80" width="220" height="32" rx="4" fill="#141D2B" stroke="#29384D" stroke-width="1"/>
+  <circle cx="100" cy="96" r="4" fill="#35E7FF"/>
+  <text x="115" y="101" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="600" fill="#35E7FF" letter-spacing="2">CYBERPUNK ARENA</text>
+
+  <!-- Title & Subtitle -->
+  <text x="80" y="180" font-family="'Barlow Condensed', 'Arial Black', sans-serif" font-size="76" font-weight="800" fill="#F2F7FF" letter-spacing="2">XO GAMES</text>
+  <text x="80" y="240" font-family="'Barlow Condensed', 'Arial Black', sans-serif" font-size="44" font-weight="700" fill="#35E7FF" letter-spacing="1">TACTICAL DUELS. NEURAL STRATEGY.</text>
+
+  <text x="80" y="295" font-family="'Inter', sans-serif" font-size="20" fill="#9BAAC0" font-weight="400">
+    Deterministic 3×3, 4×4 Matrix, and 5×5 Arena Tic-Tac-Toe.
+  </text>
+  <text x="80" y="325" font-family="'Inter', sans-serif" font-size="20" fill="#9BAAC0" font-weight="400">
+    Minimax AI bots, hand-crafted tactical puzzles, and real-time multiplayer sectors.
+  </text>
+
+  <!-- Arena Specs Badges -->
+  <g transform="translate(80, 380)">
+    <rect x="0" y="0" width="160" height="48" rx="8" fill="#141D2B" stroke="#29384D" stroke-width="1"/>
+    <text x="80" y="29" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#F2F7FF" text-anchor="middle">CLASSIC 3×3</text>
+
+    <rect x="180" y="0" width="160" height="48" rx="8" fill="#141D2B" stroke="#29384D" stroke-width="1"/>
+    <text x="260" y="29" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#35E7FF" text-anchor="middle">TACTICAL 4×4</text>
+
+    <rect x="360" y="0" width="160" height="48" rx="8" fill="#141D2B" stroke="#29384D" stroke-width="1"/>
+    <text x="440" y="29" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="600" fill="#FF3DAE" text-anchor="middle">ARENA 5×5</text>
+  </g>
+
+  <!-- Interactive Matrix Grid Artwork on the right -->
+  <g transform="translate(770, 110)">
+    <!-- Board Base Card -->
+    <rect x="0" y="0" width="350" height="350" rx="16" fill="#0E1420" stroke="#29384D" stroke-width="2"/>
+    <line x1="116" y1="20" x2="116" y2="330" stroke="#29384D" stroke-width="3" stroke-linecap="round"/>
+    <line x1="234" y1="20" x2="234" y2="330" stroke="#29384D" stroke-width="3" stroke-linecap="round"/>
+    <line x1="20" y1="116" x2="330" y2="116" stroke="#29384D" stroke-width="3" stroke-linecap="round"/>
+    <line x1="20" y1="234" x2="330" y2="234" stroke="#29384D" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Cell 0: X -->
+    <g filter="url(#neonX)">
+      <line x1="42" y1="42" x2="74" y2="74" stroke="#35E7FF" stroke-width="7" stroke-linecap="round"/>
+      <line x1="74" y1="42" x2="42" y2="74" stroke="#35E7FF" stroke-width="7" stroke-linecap="round"/>
+    </g>
+
+    <!-- Cell 2: O -->
+    <g filter="url(#neonO)">
+      <circle cx="292" cy="58" r="22" fill="none" stroke="#FF3DAE" stroke-width="7"/>
+    </g>
+
+    <!-- Cell 4: X -->
+    <g filter="url(#neonX)">
+      <line x1="159" y1="159" x2="191" y2="191" stroke="#35E7FF" stroke-width="7" stroke-linecap="round"/>
+      <line x1="191" y1="159" x2="159" y2="191" stroke="#35E7FF" stroke-width="7" stroke-linecap="round"/>
+    </g>
+
+    <!-- Cell 6: O -->
+    <g filter="url(#neonO)">
+      <circle cx="58" cy="292" r="22" fill="none" stroke="#FF3DAE" stroke-width="7"/>
+    </g>
+
+    <!-- Cell 8: X (Winning Line in progress) -->
+    <g filter="url(#neonX)">
+      <line x1="276" y1="276" x2="308" y2="308" stroke="#35E7FF" stroke-width="7" stroke-linecap="round"/>
+      <line x1="308" y1="276" x2="276" y2="308" stroke="#35E7FF" stroke-width="7" stroke-linecap="round"/>
+    </g>
+
+    <!-- Winning Strike Accent -->
+    <line x1="45" y1="45" x2="305" y2="305" stroke="#35E7FF" stroke-width="4" stroke-linecap="round" stroke-dasharray="8 6"/>
+  </g>
+
+  <!-- Footer Tagline -->
+  <text x="80" y="520" font-family="'JetBrains Mono', monospace" font-size="13" fill="#9BAAC0">
+    PROD-READY · WCAG AAA CONTRAST · SERVER-AUTHORITATIVE WEBSOCKETS · MINIMAX AI
+  </text>
+</svg>

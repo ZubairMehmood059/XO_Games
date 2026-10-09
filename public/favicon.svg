@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#141E30" />
+      <stop offset="55%" stop-color="#0A0F19" />
+      <stop offset="100%" stop-color="#05070B" />
+    </radialGradient>
+
+    <!-- Cyan Neon Gradients -->
+    <linearGradient id="cyanNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#80F5FF" />
+      <stop offset="100%" stop-color="#15D8FF" />
+    </linearGradient>
+
+    <!-- Magenta Neon Gradients -->
+    <linearGradient id="magentaNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF75C8" />
+      <stop offset="100%" stop-color="#FF1A9E" />
+    </linearGradient>
+
+    <!-- Outer Bloom Filters -->
+    <filter id="glowCyan" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18" result="blur1" />
+      <feGaussianBlur stdDeviation="6" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowMagenta" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="18" result="blur1" />
+      <feGaussianBlur stdDeviation="6" result="blur2" />
+      <feMerge>
+        <feMergeNode in="blur1" />
+        <feMergeNode in="blur2" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <filter id="glowGold" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base Cyberpunk Plate -->
+  <rect x="20" y="20" width="472" height="472" rx="108" fill="url(#bgGlow)" stroke="#26354A" stroke-width="5" />
+  
+  <!-- Subtle Internal Arena Grid Lines -->
+  <path d="M 176 28 L 176 484 M 336 28 L 336 484 M 28 176 L 484 176 M 28 336 L 484 336" 
+        stroke="#182333" stroke-width="2.5" stroke-dasharray="8 12" opacity="0.65" />
+
+  <!-- Tactical Corner Bracket Accents -->
+  <!-- Top-Left Cyan Accent -->
+  <path d="M 54 116 L 54 54 L 116 54" fill="none" stroke="#35E7FF" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+  <!-- Bottom-Right Magenta Accent -->
+  <path d="M 458 396 L 458 458 L 396 458" fill="none" stroke="#FF3DAE" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" opacity="0.9" />
+  <!-- Subtle Top-Right & Bottom-Left Framing -->
+  <path d="M 396 54 L 458 54 L 458 116" fill="none" stroke="#26354A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+  <path d="M 54 396 L 54 458 L 116 458" fill="none" stroke="#26354A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+
+  <!-- Diagonal Battle Vector Grid -->
+  <line x1="120" y1="392" x2="392" y2="120" stroke="#1F2C3F" stroke-width="3" stroke-dasharray="6 8" />
+
+  <!-- Glowing Cyan "X" (Player 1 Blade Cross) -->
+  <g filter="url(#glowCyan)">
+    <!-- Cyan Deep Neon Layer -->
+    <line x1="104" y1="116" x2="244" y2="256" stroke="#00C8EC" stroke-width="38" stroke-linecap="round" />
+    <line x1="244" y1="116" x2="104" y2="256" stroke="#00C8EC" stroke-width="38" stroke-linecap="round" />
+    <!-- Cyan Bright Core Layer -->
+    <line x1="104" y1="116" x2="244" y2="256" stroke="url(#cyanNeon)" stroke-width="26" stroke-linecap="round" />
+    <line x1="244" y1="116" x2="104" y2="256" stroke="url(#cyanNeon)" stroke-width="26" stroke-linecap="round" />
+    <!-- Cyan Ultra Hot Center Beam -->
+    <line x1="104" y1="116" x2="244" y2="256" stroke="#E6FCFF" stroke-width="10" stroke-linecap="round" />
+    <line x1="244" y1="116" x2="104" y2="256" stroke="#E6FCFF" stroke-width="10" stroke-linecap="round" />
+  </g>
+
+  <!-- Glowing Magenta "O" (Player 2 Halo Ring) -->
+  <g filter="url(#glowMagenta)">
+    <!-- Magenta Deep Neon Layer -->
+    <circle cx="340" cy="336" r="76" fill="none" stroke="#D8007E" stroke-width="38" />
+    <!-- Magenta Bright Core Layer -->
+    <circle cx="340" cy="336" r="76" fill="none" stroke="url(#magentaNeon)" stroke-width="26" />
+    <!-- Magenta Ultra Hot Center Beam -->
+    <circle cx="340" cy="336" r="76" fill="none" stroke="#FFE9F6" stroke-width="10" />
+    <!-- Tactical Halo Tick Marks -->
+    <circle cx="340" cy="260" r="4" fill="#FFE9F6" />
+    <circle cx="340" cy="412" r="4" fill="#FFE9F6" />
+    <circle cx="264" cy="336" r="4" fill="#FFE9F6" />
+    <circle cx="416" cy="336" r="4" fill="#FFE9F6" />
+  </g>
+
+  <!-- Arena Center Duel Spark / Clash Reticle -->
+  <g filter="url(#glowGold)">
+    <circle cx="256" cy="256" r="10" fill="#FFC857" />
+    <circle cx="256" cy="256" r="4" fill="#FFFBE6" />
+    <line x1="256" y1="234" x2="256" y2="278" stroke="#FFC857" stroke-width="2.5" stroke-linecap="round" />
+    <line x1="234" y1="256" x2="278" y2="256" stroke="#FFC857" stroke-width="2.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Micro Telemetry Markings -->
+  <circle cx="90" cy="90" r="3" fill="#35E7FF" opacity="0.8" />
+  <circle cx="422" cy="422" r="3" fill="#FF3DAE" opacity="0.8" />
+  <circle cx="422" cy="90" r="2.5" fill="#586E88" opacity="0.6" />
+  <circle cx="90" cy="422" r="2.5" fill="#586E88" opacity="0.6" />
+</svg>

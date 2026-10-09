@@ -1,0 +1,30 @@
+{
+  "name": "XO Games — Cyberpunk Arena Tic-Tac-Toe",
+  "short_name": "XO Games",
+  "description": "Tactical 3×3, 4×4, and 5×5 cyberpunk arena Tic-Tac-Toe platform with neural AI, tactical puzzles, and real-time multiplayer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080B12",
+  "theme_color": "#080B12",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

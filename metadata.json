@@ -1,0 +1,6 @@
+{
+  "name": "XO Games",
+  "description": "A futuristic cyberpunk arena Tic-Tac-Toe platform featuring tactical 3×3, 4×4, and 5×5 duels, neural Minimax AI, hand-crafted puzzles, and real-time online multiplayer.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
